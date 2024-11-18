@@ -10,6 +10,10 @@
 
     <div id="all">
 
+
+
+
+       
         {{ partial "top.html" . }}
 
         {{ partial "nav.html" . }}
@@ -77,6 +81,12 @@
             <!-- /.container -->
         </div>
         <!-- /#content -->
+
+        {{ if eq .Type "services" }}
+        <div class="row">
+        {{ partial "services.html" . }}
+        {{ end }}
+         </div>
 
         {{ partial "footer.html" . }}
 
